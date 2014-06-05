@@ -22,13 +22,13 @@ To write a collapsing div in bootstrap, you normally have to write:
 ```
 What I've done is set a few new data attributes in the main panel. Now instead, you just write:
 ```html
-  <div class="panel panel-primary" data-collapse="yes" data-collapseid="collapseItem" data-collapsetitle="Title" data-paneltype="default">
+  <div data-collapse="yes" data-collapseid="collapseItem" data-collapsetitle="Title" data-paneltype="default">
     Content
   </div>
 ```
 Include bootstrap.collapser.js and you're done! It will find ALL items with "data-collapse" as an attribute recursively, so sub collapsibles are an option:
 ```html
-  <div class="panel panel-primary" data-collapse="yes" data-collapseid="test" data-collapsetitle="collapseTest" data-paneltype="default">
+  <div data-collapse="yes" data-collapseid="test" data-collapsetitle="collapseTest" data-paneltype="default">
       I want content here.
       <div data-collapse="yes" data-collapseid="subtest" data-collapsetitle="collapseSubTest" data-paneltype="danger">
           Sub content.
